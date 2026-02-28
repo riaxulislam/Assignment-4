@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style/index.css">
+    <title>Job Application Tracker</title>
+</head>
+<body>
+    <section class="header">
+        <h1>Job Application Tracker</h1>
+        <div class="cards">
+            <div class="card">
+                <p>Total</p>
+                <p id="total-count">0</p>
+            </div>
+            <div class="card">
+                <p>Interview</p>
+                <p id="interview-count" style="color: #10B981;">0</p>
+            </div>
+            <div class="card">
+                <p>Rejected</p>
+                <p id="rejected-count" style="color: #EF4444;">0</p>
+            </div>
+        </div>
+    </section>
+    <section class="main">
+        <div class="main-title">
+            <h2>Available Jobs</h2>
+            <p>0 jobs</p>
+        </div>
+        <div class="filters">
+            <button>All</button>
+            <button>Interview</button>
+            <button>Rejected</button>
+        </div>
+
+        <div class="job-posts">
+            <div class="no-job-posts" style="text-align: center; padding: 40px 0; color: #64748B; background-color: white; padding: 110px 0; border-radius: 10px; border: 1px solid #E2E8F0;">
+                <img src="Assets/assignment_7959593 1.png" alt="">
+                <h4>No jobs available</h4>
+                <p>Check back soon for new job opportunities</p>
+            </div>
+            <div class="job-post">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3 style="color: #002C5C;">Mobile First Corp</h3>
+                        <p style="color: #64748B;">React Native Developer</p>
+                    </div>
+                    <div>
+                        <button class="delete-btn" style="background-color: white; border: none; cursor: pointer;"><img src="Assets/Group 1.png" alt="Delete job"></button>
+                    </div>
+                </div>
+                <p style="color: #64748B;">Remote • Full-time • $130,000 - $175,000</p>
+                <button class="apply-status" data-state="none" style="background-color: #EEF4FF; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600;">Not Applied</button>
+                <button class="apply-status" data-state="applied" style="background-color: #7dffcd; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600; display: none;">Applied</button>
+                <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <div>
+                    <button class="interview-btn">Interview</button>
+                    <button class="rejected-btn">Rejected</button>
+                </div>
+            </div>
+            <div class="job-post">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3 style="color: #002C5C;">WebFlow Agency</h3>
+                        <p style="color: #64748B;">Web Designer & Developer</p>
+                    </div>
+                    <div>
+                        <button class="delete-btn" style="background-color: white; border: none; cursor: pointer;"><img src="Assets/Group 1.png" alt="Delete job"></button>
+                    </div>
+                </div>
+                <p style="color: #64748B;">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                <button class="apply-status" data-state="none" style="background-color: #EEF4FF; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600;">Not Applied</button>
+                <button class="apply-status" data-state="applied" style="background-color: #7dffcd; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600; display: none;">Applied</button>
+                <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                <div>
+                    <button class="interview-btn">Interview</button>
+                    <button class="rejected-btn">Rejected</button>
+                </div>
+            </div>
+            <div class="job-post">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3 style="color: #002C5C;">DataViz Solutions</h3>
+                        <p style="color: #64748B;">Data Visualization Specialist</p>
+                    </div>
+                    <div>
+                        <button class="delete-btn" style="background-color: white; border: none; cursor: pointer;"><img src="Assets/Group 1.png" alt="Delete job"></button>
+                    </div>
+                </div>
+                <p style="color: #64748B;">Boston, MA • Full-time • $125,000 - $165,000</p>
+                <button class="apply-status" data-state="none" style="background-color: #EEF4FF; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600;">Not Applied</button>
+                <button class="apply-status" data-state="applied" style="background-color: #7dffcd; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600; display: none;">Applied</button>
+                <p>Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                <div>
+                    <button class="interview-btn">Interview</button>
+                    <button class="rejected-btn">Rejected</button>
+                </div>
+            </div>
+            <div class="job-post">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3 style="color: #002C5C;">CloudFirst Inc</h3>
+                        <p style="color: #64748B;">Backend Developer</p>
+                    </div>
+                    <div>
+                        <button class="delete-btn" style="background-color: white; border: none; cursor: pointer;"><img src="Assets/Group 1.png" alt="Delete job"></button>
+                    </div>
+                </div>
+                <p style="color: #64748B;">Seattle, WA • Full-time • $140,000 - $190,000</p>
+                <button class="apply-status" data-state="none" style="background-color: #EEF4FF; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600;">Not Applied</button>
+                <button class="apply-status" data-state="applied" style="background-color: #7dffcd; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600; display: none;">Applied</button>
+                <p>Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                <div>
+                    <button class="interview-btn">Interview</button>
+                    <button class="rejected-btn">Rejected</button>
+                </div>
+            </div>
+            <div class="job-post">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3 style="color: #002C5C;">Innovation Labs</h3>
+                        <p style="color: #64748B;">UI/UX Engineer</p>
+                    </div>
+                    <div>
+                        <button class="delete-btn" style="background-color: white; border: none; cursor: pointer;"><img src="Assets/Group 1.png" alt="Delete job"></button>
+                    </div>
+                </div>
+                <p style="color: #64748B;">Austin, TX • Full-time • $110,000 - $150,000</p>
+                <button class="apply-status" data-state="none" style="background-color: #EEF4FF; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600;">Not Applied</button>
+                <button class="apply-status" data-state="applied" style="background-color: #7dffcd; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600; display: none;">Applied</button>
+                <p>Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                <div>
+                    <button class="interview-btn">Interview</button>
+                    <button class="rejected-btn">Rejected</button>
+                </div>
+            </div>
+            <div class="job-post">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3 style="color: #002C5C;">MegaCorp Solutions</h3>
+                        <p style="color: #64748B;">JavaScript Developer</p>
+                    </div>
+                    <div>
+                        <button class="delete-btn" style="background-color: white; border: none; cursor: pointer;"><img src="Assets/Group 1.png" alt="Delete job"></button>
+                    </div>
+                </div>
+                <p style="color: #64748B;">New York, NY • Full-time • $130,000 - $170,00</p>
+                <button class="apply-status" data-state="none" style="background-color: #EEF4FF; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600;">Not Applied</button>
+                <button class="apply-status" data-state="applied" style="background-color: #7dffcd; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600; display: none;">Applied</button>
+                <p>Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                <div>
+                    <button class="interview-btn">Interview</button>
+                    <button class="rejected-btn">Rejected</button>
+                </div>
+            </div>
+            <div class="job-post">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3 style="color: #002C5C;">StartupXYZ</h3>
+                        <p style="color: #64748B;">Full Stack Engineer</p>
+                    </div>
+                    <div>
+                        <button class="delete-btn" style="background-color: white; border: none; cursor: pointer;"><img src="Assets/Group 1.png" alt="Delete job"></button>
+                    </div>
+                </div>
+                <p style="color: #64748B;">Remote • Full-time • $120,000 - $160,000</p>
+                <button class="apply-status" data-state="none" style="background-color: #EEF4FF; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600;">Not Applied</button>
+                <button class="apply-status" data-state="applied" style="background-color: #7dffcd; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600; display: none;">Applied</button>
+                <p>Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                <div>
+                    <button class="interview-btn">Interview</button>
+                    <button class="rejected-btn">Rejected</button>
+                </div>
+            </div>
+            <div class="job-post">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3 style="color: #002C5C;">TechCorp Industries</h3>
+                        <p style="color: #64748B;">Senior Frontend Developer</p>
+                    </div>
+                    <div>
+                        <button class="delete-btn" style="background-color: white; border: none; cursor: pointer;"><img src="Assets/Group 1.png" alt="Delete job"></button>
+                    </div>
+                </div>
+                <p style="color: #64748B;">San Francisco, CA • Full-time • $130,000 - $175,000</p>
+                <button class="apply-status" data-state="none" style="background-color: #EEF4FF; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600;">Not Applied</button>
+                <button class="apply-status" data-state="applied" style="background-color: #7dffcd; border: none; border-radius: 4px; padding: 8px 12px; cursor: pointer; text-transform: uppercase; font-weight: 600; display: none;">Applied</button>
+                <p>We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                <div>
+                    <button class="interview-btn">Interview</button>
+                    <button class="rejected-btn">Rejected</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="Script/script.js">
+
+    </script>
+
+</body>
+</html>

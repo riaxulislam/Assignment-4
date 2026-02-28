@@ -1,0 +1,180 @@
+
+body {
+  font-family: "Geist", sans-serif;
+  font-weight: 500;
+  background-color: #F8FAFC;
+}
+
+
+.header{
+    max-width: 1110px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.header h1{
+  text-align: left;
+  margin-top: 20px;
+  color: #002C5C;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.card{
+    width: 90%;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+}
+
+.card p{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.main{
+    max-width: 1110px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-bottom: 60px;
+}
+
+.main-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.main-title h2{
+    color: #002C5C;
+    font-size: 20px;
+}
+
+.filters{
+    display: flex;
+    gap: 8px;
+}
+
+.filters button{
+    background-color: white;
+    border: 1px solid #E2E8F0;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.filters button:hover{
+    background-color: #3B82F6;
+    color: white;
+}
+
+.filters button.active{
+    background-color: #3B82F6;
+    color: white;
+}
+
+.job-posts{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.job-post{
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+}
+
+.interview-btn{
+    background-color: white;
+    border: 1px solid #10B981;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #10B981;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: ease-in-out 0.3s;
+}
+
+.interview-btn:hover{
+    background-color: #10B981;
+    color: white;
+}
+
+.rejected-btn{
+    background-color: white;
+    border: 1px solid #EF4444;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #EF4444;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: ease-in-out 0.3s;
+}     
+
+.rejected-btn:hover{
+    background-color: #EF4444;
+    color: white;
+}
+
+.interview-btn.active,
+.rejected-btn.active {
+    color: white;
+}
+.interview-btn.active {
+    background-color: #10B981;
+    border-color: #10B981;
+}
+.rejected-btn.active {
+    background-color: #EF4444;
+    border-color: #EF4444;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .header, .main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .header, .main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        display: flex;
+        justify-content: space-between;
+    }
+}
